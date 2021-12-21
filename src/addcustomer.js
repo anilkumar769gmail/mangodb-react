@@ -2,7 +2,9 @@
 import React, {Component} from 'react'
 
 class Addcustomer extends Component{
-state = {account_number:"",
+state = {
+        id:"",
+        account_number:"",
         firstname:"",
         lastname:"",
         address: "",
@@ -138,7 +140,8 @@ render(){
                 <td><button type="button" className="button" onClick={this.submit}>Submit</button></td>
               </tr>
           </div>
-          -----
+          
+          -----{/*Delete customer begins here*/}
           <div className='deletecustomer'>
             <div className="subsubheading">Delete Customer</div>
             <tr className='txtcolor'>
@@ -146,7 +149,6 @@ render(){
               <td><input value={this.state.currentCustomer ? this.state.currentCustomer:""}  onChange={this.deleteAccountNumber}/></td>
             </tr>
             <tr>
-              {/* <td><button type="button" className="button" onClick={this.addToCustomerList}>Submit</button></td> */}
               <td><button type="button" className="button" onClick={this.delete} currentCustomer = {this.currentCustomer} >Delete</button></td>
             </tr>
           </div>
